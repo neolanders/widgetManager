@@ -114,3 +114,28 @@ Overview
         │   └── environment     - Configuration specific to the node environment
         └── views               - Server rendered views
 
+
+## Some explanation about my work:
+
+I part the project in two modules,
+wmApp.core (core application)
+wmApp.widget (application for widgetManager)
+Each modules has its own dependencies (filters, directives, controllers, views) depending on their needs.
+
+## SERVER:
+Server run on nodeJs (npm start) on localhost:3000.
+
+## UI-ROUTER:
+As per requirement, I use angular-ui-router for routing,
+States are defined under modules/widget/config/routes.js
+In order to keep organize my states in the application and for a better understanding  I'm using a helper called 
+angular-ui-router.stateHelper which is allow to manage states as a three object. 
+
+## LOCAL-STORAGE:
+In order to store data in local storage for the application, I'm using angular-cache with $angularCacheFactory
+Also, to handle Widget data object I've created a  CRUD (create, read, update, delete) Service factory (Widgets)  located under modules/widget/services/widgets.js  
+
+## KARMA TEST:
+This is was not a requirement, 
+However, I've set the configuration file for karma tests karma.conf.js 
+And I've started some test for widgets service and a directive I'm using to manage widget properties.
