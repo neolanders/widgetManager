@@ -46,7 +46,8 @@ Please store the widgets in either a cookie, or local storage.
 * make the number of key/value text field pairs dynamic: next to each key/value pair text fields will be                       either a minus button, a plus button, or both for adding and removing key/value pairs while editing. 
   (For example, in add, there will be one key/value text fields pair with a plus button.  
   Once the plus button is clicked and a new pair of key/value text fields is present, the first plus will                      change to a minus, and the second will contain a plus and minus)  
--
+
+--
 **As a hint:** ui-router has the ability to apply multiple views inside of a view.  
       
 ---  
