@@ -147,4 +147,4 @@ And I've started some test for widgets service and a directive I'm using to mana
 
 ## Screens Shot:
 
-![Alt text](/master/screenshots/screenAdd.png?raw=true "Add View")
+![Alt text](/screenshots/screenAdd.png?raw=true "Add View")
