@@ -36,33 +36,22 @@ which will add the widget to the list of widgets in the summary.
 Please note that you will be responsible for generating the ids for each widget.  
 Please store the widgets in either a cookie, or local storage.  
 
-*extra credits:  - have an “x” button on the top right of the details view to clear the view from the screen. 
+**extra credits:**
+                 - have an “x” button on the top right of the details view to clear the view from the screen. 
                  - make sure all widget names are unique (if not, show a ui-bootstrap error alert) 
                  - if there is an error in the key/value pairs (empty key), disable the save button, 
                   and highlight the empty key text field 
-                 - make the number of key/value text field pairs dynamic: next to each key/value pair text fields will be either a minus button, 
-                   a plus button, or both for adding and removing key/value pairs while editing. 
+                 - make the number of key/value text field pairs dynamic: next to each key/value pair text fields will be                       either a minus button, a plus button, or both for adding and removing key/value pairs while editing. 
                    (For example, in add, there will be one key/value text fields pair with a plus button.  
-                   Once the plus button is clicked and a new pair of key/value text fields is present, the first plus will change to a minus, 
-                   and the second will contain a plus and minus)  As a hint: ui-router has the ability to apply multiple views inside of a view.  
-                 
-                 For example, you can have a <div ui-view=“main”></div>, and the template that you apply to this “main” view can have within it <div ui-view=“summary”></div><div ui-view=“details”></div>, or a different view can set the main template to have <div ui-view=“edit”></div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
-
----
-
-AngularUI Router is a routing framework for [AngularJS](http://angularjs.org), which allows you to organize the
-parts of your interface into a [*state machine*](https://en.wikipedia.org/wiki/Finite-state_machine). Unlike the
-[`$route` service](http://docs.angularjs.org/api/ngRoute.$route) in the Angular ngRoute module, which is organized around URL
-routes, UI-Router is organized around [*states*](https://github.com/angular-ui/ui-router/wiki),
-which may optionally have routes, as well as other behavior, attached.
-
-States are bound to *named*, *nested* and *parallel views*, allowing you to powerfully manage your application's interface.
-
-Example: http://angular-ui.github.io/ui-router/sample/
-
+                   Once the plus button is clicked and a new pair of key/value text fields is present, the first plus will                      change to a minus, and the second will contain a plus and minus)  
+                   
+                  
 -
-**Note:** *UI-Router is under active development. As such, while this library is well-tested, the API may change. Consider using it in production applications only if you're comfortable following a changelog and updating your usage accordingly.*
-
+**As a hint:** ui-router has the ability to apply multiple views inside of a view.  
+      
+---  
+                 
+For example, you can have a <div ui-view=“main”></div>, and the template that you apply to this “main” view can have within it <div ui-view=“summary”></div><div ui-view=“details”></div>, or a different view can set the main template to have <div ui-view=“edit”></div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
 
 ## Usage
 
@@ -130,6 +119,21 @@ As per requirement, I use angular-ui-router for routing,
 States are defined under modules/widget/config/routes.js
 In order to keep organize my states in the application and for a better understanding  I'm using a helper called 
 angular-ui-router.stateHelper which is allow to manage states as a three object. 
+
+---
+
+AngularUI Router is a routing framework for [AngularJS](http://angularjs.org), which allows you to organize the
+parts of your interface into a [*state machine*](https://en.wikipedia.org/wiki/Finite-state_machine). Unlike the
+[`$route` service](http://docs.angularjs.org/api/ngRoute.$route) in the Angular ngRoute module, which is organized around URL
+routes, UI-Router is organized around [*states*](https://github.com/angular-ui/ui-router/wiki),
+which may optionally have routes, as well as other behavior, attached.
+
+States are bound to *named*, *nested* and *parallel views*, allowing you to powerfully manage your application's interface.
+
+Example: http://angular-ui.github.io/ui-router/sample/
+
+-
+**Note:** *UI-Router is under active development. As such, while this library is well-tested, the API may change. Consider using it in production applications only if you're comfortable following a changelog and updating your usage accordingly.*
 
 ## LOCAL-STORAGE:
 In order to store data in local storage for the application, I'm using angular-cache with $angularCacheFactory
