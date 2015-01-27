@@ -64,3 +64,46 @@ Example: http://angular-ui.github.io/ui-router/sample/
 **Note:** *UI-Router is under active development. As such, while this library is well-tested, the API may change. Consider using it in production applications only if you're comfortable following a changelog and updating your usage accordingly.*
 
 
+## Project Structure
+
+Overview
+
+    ├── assets
+    │   ├── app                 - All of our app specific components go in here
+    │   ├── assets              - Custom assets: fonts, images, etc…
+    │   ├── components          - Our reusable components, non-specific to to our app
+    │
+    |── dists
+    │   ├── app                 - All of our app specific components go in here
+    │   ├── assets              - Custom assets: fonts, images, etc…
+    │   ├── components          - Our reusable components, non-specific to to our app
+    │
+    |── fonts
+    │   ├── app                 - All of our app specific components go in here
+    │   ├── assets              - Custom assets: fonts, images, etc…
+    │   ├── components          - Our reusable components, non-specific to to our app
+    |
+    |── i18n
+    │   ├── app                 - All of our app specific components go in here
+    |
+    |── libs
+    │   └──  app                - All of our app specific components go in here
+    │   └── assets              - Custom assets: fonts, images, etc…
+    |
+    |── modules
+    │   └──  core                 - All of our app specific components go in here    |
+    │   └──  widget              - Custom assets: fonts, images, etc…
+    │        └── config
+    │        └── controllers
+    |
+    |__ node_modules
+    |
+    └── server
+        ├── api                 - Our apps server api
+        ├── auth                - For handling authentication with different auth strategies
+        ├── components          - Our reusable or app-wide components
+        ├── config              - Where we do the bulk of our apps configuration
+        │   └── local.env.js    - Keep our environment variables out of source control
+        │   └── environment     - Configuration specific to the node environment
+        └── views               - Server rendered views
+
