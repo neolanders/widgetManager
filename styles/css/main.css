@@ -1,0 +1,29 @@
+.list-group-item {
+  height: 54px;
+}
+.panel .panel-heading {
+  background-color: #222;
+  color: #FFF;
+  height: 69px;
+  padding: 0;
+}
+.panel .panel-heading h1 {
+  display: inline;
+}
+.panel .panel-body pre {
+  margin: 2%;
+}
+form[name='widgetForm'] .form-group > div {
+  padding: 0;
+  margin: 0;
+}
+.input-group-addon {
+  cursor: pointer;
+}
+.t1 {
+  font-weight: bold;
+  line-height: 3rem;
+}
+input.ng-invalid {
+  border: 1px solid red;
+}

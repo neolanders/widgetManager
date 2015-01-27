@@ -1,0 +1,47 @@
+<script type="text/ng-template" id="summaryModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">{{modal.title}}</h3>
+    </div>
+    <div class="modal-body" data-ng-if="modal.message">
+        <div class="alert alert-warning" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            {{modal.message}}
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-black" data-ng-click="onModalConfirm()">OK</button>
+        <button class="btn btn-grey" data-ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+<div class="col-xs-10 col-lg-4 col-xs-offset-1" role="navigation">
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="widget in widgets">
+                <div class="pull-left"><span class="t1">{{widget.name}}</span></div>
+                <div class="pull-right">
+                    <a class="btn btn-black" ui-sref="summary.detail({widgetId:widget.id})">
+                        <span>{{'DETAIL_LABEL'|trans}}</span> <i class="glyphicon glyphicon-eye-open"></i>
+                    </a>
+                    <a class="btn btn-black" data-ng-click="deleteWidget(widget);">
+                        <span>{{'REMOVE_LABEL'|trans}}</span> <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-black" ui-sref="summary.add({})">
+            <span>{{'ADD_LABEL'|trans}}</span>
+        </button>
+        <button type="button" class="btn btn-black" ng-click="removeAll()">
+            <span>{{'CLEAR_ALL_LABEL'|trans}}</span>
+        </button>
+    </div>
+    <div class="row">&nbsp;</div>
+</div>
+<div class="col-xs-10 col-lg-6 col-xs-offset-1">
+    <div class="well well-lg text-center" ng-if="title==''">
+        <strong>{{'NO_WIDGET_SELECTED_NOTIFICATION'|trans}}</strong>
+    </div>
+    <div ui-view />
+</div>

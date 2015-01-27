@@ -1,0 +1,14 @@
+<div class="form-group" ng-repeat="property in properties">
+    <!--<pre>{{property|json}}</pre>-->
+    <label class="control-label col-xs-3 hidden-xs">Property {{$index}}</label>
+    <div class="input-group col-xs-8 hidden-xs">
+        <input type="text" class="form-control" placeholder="New Property" data-ng-model="property.name" />
+        <span class="input-group-addon" ng-if="$last && properties.length>1 || properties.length==1" data-ng-click="addProperty(property)"><i class="glyphicon glyphicon-plus"></i></span>
+        <span class="input-group-addon" ng-if="!$last && property.name!='' && properties.length>1" data-ng-click="removeProperty( property )"><i class="glyphicon glyphicon-minus"></i></span>
+    </div>
+    <div class="input-group col-xs-10 col-xs-offset-1 visible-xs">
+        <input type="text" class="form-control" placeholder="New Property" data-ng-model="property.name" />
+        <span class="input-group-addon" ng-if="$last && properties.length>1 || properties.length==1" data-ng-click="addProperty(property)"><i class="glyphicon glyphicon-plus"></i></span>
+        <span class="input-group-addon" ng-if="!$last && property.name!='' && properties.length>1" data-ng-click="removeProperty( property )"><i class="glyphicon glyphicon-minus"></i></span>
+    </div>
+</div>

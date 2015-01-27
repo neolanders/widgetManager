@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+    <form class="form-horizontal" role="form" name="widgetForm" data-ng-submit="saveWidget(widget)"><!-- novalidate-->
+        <div class="panel-heading">
+            <div class="col-xs-10">
+                <h2>{{title|trans}} <span data-ng-if="$stateParams.widgetId>0">{{widget.name}}</span></h2>
+            </div>
+            <div class="col-xs-2">
+                <span class="close" data-ng-click="refresh()"><i class="glyphicon glyphicon-remove"></i></span>
+            </div>
+        </div>
+        <div class="panel-body">
+            <!--<pre>{{widget|json}}</pre>-->
+            <alert data-ng-show="alert.type" type="{{alert.type}}" close="onAlertClose()">{{alert.message}}</alert>
+            <div class="form-group">
+                <label for="widgetName" class="control-label col-xs-3 hidden-xs">{{'WIDGET_NAME_LABEL'|trans}}</label>
+                <div class="col-xs-8 hidden-xs">
+                     <input type="text" id="widgetName" name="widgetName" class="form-control" placeholder="Widget Name" data-ng-model="widget.name" required />
+                     <!--valid-widget-name-->
+                </div>
+                <div class="col-xs-12 visible-xs">
+                    <input type="text" id="widgetName" name="widgetName" class="form-control" placeholder="Widget Name" data-ng-model="widget.name" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <widget-properties widget-data="widget"></widget-properties>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-11 col-xs-offset-1">
+                    <button class="btn btn-black pull-right" type="submit" data-ng-disabled="widgetForm.$invalid">
+                        <span>{{'SAVE_LABEL'|trans}}</span> <i class="glyphicon glyphicon glyphicon-floppy-disk"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

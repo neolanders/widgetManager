@@ -1,15 +1,17 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "widgetManager",
+  "description": "A widget Manager",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
-    "html5-boilerplate": "~4.3.0"
+    "angular-cache": "~2.x.x",
+    "html5-boilerplate": "~4.3.0",
+    "angular-bootstrap": "~0.11.0",
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.1",
+    "jasmine-jquery":"~2.0.x"
   }
 }

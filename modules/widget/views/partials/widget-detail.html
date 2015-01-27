@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="col-xs-10">
+      <h2>{{title|trans}} {{widget.name}}</h2>
+    </div>
+    <div class="col-xs-2">
+      <span class="close" data-ng-click="refresh()"><i class="glyphicon glyphicon-remove"></i></span>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <!--<pre>{{widget|json}}</pre>-->
+      <div class="well well-lg text-center" ng-if="widget.properties.length==0">
+        <strong>{{'NO_WIDGET_PROPERTIES_NOTIFICATION'|trans}}</strong>
+      </div>
+      <div ng-if="widget.properties.length>0">
+        <ul class="list-group properties">
+          <li ng-show="property.name!=''" class="list-group-item" ng-repeat="property in visibleProperties">{{ property.name }}</li>
+          <li ng-show="enableShowMore && property.name!=''" class="list-group-item" ng-repeat="property in hiddenProperties">{{ property.name }}</li>
+        </ul>
+        <button ng-if="hiddenProperties.length>0 && hiddenProperties[0].name!=''" class="btn btn-black" ng-click="showMore()" ng-hide="enableShowMore">{{'SEE_MORE_LABEL'|trans}}</button></li>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1">
+        <button type="submit" class="btn btn-black pull-right" ui-sref="summary.edit({widgetId:widget.id})">
+          <span>{{'EDIT_LABEL'|trans}}</span> <i class="glyphicon glyphicon-edit"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="wmApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="wmApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="wmApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="wmApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title ng-bind="$state.current.name + ' - Widget Manager'">Widget Manager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="libs/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="libs/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="dist/widget.min.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="libs/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <pre ng-if="debugMode">
+    $state = {{$state.current.name}}
+    $stateParams = {{$stateParams}}
+    $state full url = {{ $state.$current.url.source }}
+  </pre>
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="summary">Widget Manager</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li ng-class="{active: $state.includes('summary')}"><a ui-sref="summary">Summary List</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row" ui-view></div>
+    <hr>
+    <footer>
+      <p>&copy; Company 2014</p>
+    </footer>
+  </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-cache/dist/angular-cache.js"></script>
+  <script src="libs/ui-router/release/angular-ui-router.min.js"></script>
+  <script src="libs/angular-ui-router.stateHelper/statehelper.min.js"></script>
+
+  <!-- 3thirds parts lib -->
+  <script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="libs/underscore/underscore.js"></script>
+  <script src="libs/angular-translate/angular-translate.min.js"></script>
+  <script src="libs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+  <!-- 3thirds parts lib -->
+
+  <script src="dist/main.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
