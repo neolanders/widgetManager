@@ -46,7 +46,7 @@ Please store the widgets in either a cookie, or local storage.
                    Once the plus button is clicked and a new pair of key/value text fields is present, the first plus will change to a minus, 
                    and the second will contain a plus and minus)  As a hint: ui-router has the ability to apply multiple views inside of a view.  
                  
-                 For example, you can have a &lt;div ui-view=“main”>&lt;/div>, and the template that you apply to this “main” view can have within it &lt;div ui-view=“summary”>&lt;/div>&lt;div ui-view=“details”>&lt;/div>, or a different view can set the main template to have &lt;div ui-view=“edit”>&lt;/div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
+                 For example, you can have a <div ui-view=“main”></div>, and the template that you apply to this “main” view can have within it <div ui-view=“summary”></div><div ui-view=“details”></div>, or a different view can set the main template to have <div ui-view=“edit”></div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
 
 ---
 
