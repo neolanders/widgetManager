@@ -145,6 +145,6 @@ This is was not a requirement,
 However, I've set the configuration file for karma tests karma.conf.js 
 And I've started some test for widgets service and a directive I'm using to manage widget properties.
 
-## Screen Shot:
+## Screens Shot:
 
 ![Alt text](/widgetManager/screenshots/screenAdd.png?raw=true "Add View")
