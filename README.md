@@ -11,8 +11,8 @@ and ui-bootstrap for bootstrap directives), and Twitter Bootstrap as the CSS fra
 code a “widget” manager.  The Widget Manager will have a homepage and an add/edit page.    
 
 The homepage view should contain two “views” (ui-router terminology).  
-The views are: - widget summary    
-               - widget detail 
+The views are: *  widget summary    
+               *  widget detail 
                
 The homepage url will be /#/ (localhost:3000/#/) and will only display the summary, 
 a list of widget names.  Next to each name will be two buttons: “details", 
@@ -37,11 +37,11 @@ Please note that you will be responsible for generating the ids for each widget.
 Please store the widgets in either a cookie, or local storage.  
 
 **extra credits:**
-                 - have an “x” button on the top right of the details view to clear the view from the screen. 
-                 - make sure all widget names are unique (if not, show a ui-bootstrap error alert) 
-                 - if there is an error in the key/value pairs (empty key), disable the save button, 
+                 * have an “x” button on the top right of the details view to clear the view from the screen. 
+                 * make sure all widget names are unique (if not, show a ui-bootstrap error alert) 
+                 *  if there is an error in the key/value pairs (empty key), disable the save button, 
                   and highlight the empty key text field 
-                 - make the number of key/value text field pairs dynamic: next to each key/value pair text fields will be                       either a minus button, a plus button, or both for adding and removing key/value pairs while editing. 
+                 * make the number of key/value text field pairs dynamic: next to each key/value pair text fields will be                       either a minus button, a plus button, or both for adding and removing key/value pairs while editing. 
                    (For example, in add, there will be one key/value text fields pair with a plus button.  
                    Once the plus button is clicked and a new pair of key/value text fields is present, the first plus will                      change to a minus, and the second will contain a plus and minus)  
                    
