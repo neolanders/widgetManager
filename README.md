@@ -58,7 +58,7 @@ For example, you can have a <div ui-view=“main”></div>, and the template tha
 
 ## Usage
 
-Run and Install node ddependency project :
+Run and Install node dependency for the project :
 ```
 npm start
 ```
