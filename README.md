@@ -2,7 +2,7 @@
 
 After being interviewed for a reputed company, I got an interesting assignment to do using ui-router. 
 I found it a very useful and flexible solution to use routing with nested views. 
-Also this assignment involve many aspects and technologies to build a proper web application today ([AngularJS](https://angularjs.org/), [Grunt](http://gruntjs.com/) JavaScript Task Runner, Server running on [NodeJs](http://nodejs.org/), [Twitter Botstrap]((http://getbootstrap.com/) (Css3), [Karma](http://karma-runner.github.io/0.12/index.html) and [Jasmine](http://jasmine.github.io/) for testing)
+Also this assignment involve many aspects and technologies to build a proper web application today ([AngularJS](https://angularjs.org/), [Grunt](http://gruntjs.com/) JavaScript Task Runner, Server running on [NodeJs](http://nodejs.org/), [Twitter Botstrap](http://getbootstrap.com/) (Css3), [Karma](http://karma-runner.github.io/0.12/index.html) and [Jasmine](http://jasmine.github.io/) for testing)
 
 For this reason I've decided to share my work below. 
 
