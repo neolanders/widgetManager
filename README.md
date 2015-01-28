@@ -2,7 +2,7 @@
 
 After being interviewed for a reputed company, I got an interesting assignment to do using ui-router. 
 I found it a very useful and flexible solution to use routing with nested views. 
-For this reason I've decided to share my assignment below. 
+For this reason I've decided to share my work below. 
 
 **Assignment Description:**
 
