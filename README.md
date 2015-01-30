@@ -93,15 +93,14 @@ Overview
     │   ├── app                 - All of our app specific components go in here
     │   ├── assets              - Custom assets: fonts, images, etc…
     │   ├── components          - Our reusable components, non-specific to to our app
-    │
+    │__ e2e-tests
     |── fonts
     │   ├── app                 - All of our app specific components go in here
     │   ├── assets              - Custom assets: fonts, images, etc…
     │   ├── components          - Our reusable components, non-specific to to our app
     |
     |── i18n
-    │   ├── app                 - All of our app specific components go in here
-    |
+    │   └── lang-en_En.json     - All of our app specific components go in here
     |── libs
     │   └──  app                - All of our app specific components go in here
     │   └── assets              - Custom assets: fonts, images, etc…
