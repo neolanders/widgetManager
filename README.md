@@ -2,7 +2,9 @@
 
 After being interviewed for a reputed company, I got an interesting assignment to do using ui-router. 
 I found it a very useful and flexible solution to use routing with nested views. 
-For this reason I've decided to share my assignment below. 
+Also this assignment involve many aspects and technologies to build a proper web application today ([AngularJS](https://angularjs.org/), [Grunt](http://gruntjs.com/) JavaScript Task Runner, Server running on [NodeJs](http://nodejs.org/), [Twitter Botstrap](http://getbootstrap.com/) (Css3), [Karma](http://karma-runner.github.io/0.12/index.html) and [Jasmine](http://jasmine.github.io/) for testing)
+
+For this reason I've decided to share my work below. 
 
 **Assignment Description:**
 
@@ -52,11 +54,28 @@ Please store the widgets in either a cookie, or local storage.
       
 ---  
                  
-For example, you can have a <div ui-view=“main”></div>, and the template that you apply to this “main” view can have within it <div ui-view=“summary”></div><div ui-view=“details”></div>, or a different view can set the main template to have <div ui-view=“edit”></div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
+For example, you can have a 
+
+```html
+<div ui-view=“main”></div>
+```
+, and the template that you apply to this “main” view can have within it 
+
+```html
+<div ui-view=“summary”></div><div ui-view=“details”></div>
+```
+
+, or a different view can set the main template to have 
+
+```html
+<div ui-view=“edit”></div>.  
+```
+
+This is all handled via the $stateProvider in the module config using ui-router nested views.
 
 ## Usage
 
-Run and Install node ddependency project :
+Run and Install node dependency for the project :
 ```
 npm start
 ```
@@ -74,15 +93,14 @@ Overview
     │   ├── app                 - All of our app specific components go in here
     │   ├── assets              - Custom assets: fonts, images, etc…
     │   ├── components          - Our reusable components, non-specific to to our app
-    │
+    │__ e2e-tests
     |── fonts
     │   ├── app                 - All of our app specific components go in here
     │   ├── assets              - Custom assets: fonts, images, etc…
     │   ├── components          - Our reusable components, non-specific to to our app
     |
     |── i18n
-    │   ├── app                 - All of our app specific components go in here
-    |
+    │   └── lang-en_En.json     - All of our app specific components go in here
     |── libs
     │   └──  app                - All of our app specific components go in here
     │   └── assets              - Custom assets: fonts, images, etc…
@@ -147,4 +165,4 @@ And I've started some test for widgets service and a directive I'm using to mana
 
 ## Screens Shot:
 
-![Alt text](/widgetManager/screenshots/screenAdd.png?raw=true "Add View")
+![Alt text](/screenshots/screenAdd.png?raw=true "Add View")
