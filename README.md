@@ -54,7 +54,24 @@ Please store the widgets in either a cookie, or local storage.
       
 ---  
                  
-For example, you can have a <div ui-view=“main”></div>, and the template that you apply to this “main” view can have within it <div ui-view=“summary”></div><div ui-view=“details”></div>, or a different view can set the main template to have <div ui-view=“edit”></div>.  This is all handled via the $stateProvider in the module config using ui-router nested views.
+For example, you can have a 
+
+```html
+<div ui-view=“main”></div>
+```
+, and the template that you apply to this “main” view can have within it 
+
+```html
+<div ui-view=“summary”></div><div ui-view=“details”></div>
+```
+
+, or a different view can set the main template to have 
+
+```html
+<div ui-view=“edit”></div>.  
+```
+
+This is all handled via the $stateProvider in the module config using ui-router nested views.
 
 ## Usage
 
