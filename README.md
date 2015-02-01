@@ -116,9 +116,12 @@ Overview
     |__ node_modules           - Contain all node modules (bower + grunt + karma + http-server) lister under package.json
     |
     └── styles
-        ├── css                - Our css files
-        └── less               - Our less files
-
+    |   ├── css                - Our css files
+    |   └── less               - Our less files
+    └── app.js                 - Main file for angular bootstrap
+    └── GruntFile.js           - Configucations files for our tasks (build...)
+    └── karma.conf.js          - Configuration file for our tests
+    └── package.json
 
 ## Some explanation about my work:
 
