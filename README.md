@@ -85,42 +85,39 @@ npm start
 Overview
 
     ├── assets
-    │   ├── app                 - All of our app specific components go in here
-    │   ├── assets              - Custom assets: fonts, images, etc…
-    │   ├── components          - Our reusable components, non-specific to to our app
-    │
-    |── dists
-    │   ├── app                 - All of our app specific components go in here
-    │   ├── assets              - Custom assets: fonts, images, etc…
-    │   ├── components          - Our reusable components, non-specific to to our app
-    │__ e2e-tests
+    │   └── widgetProperties.json  - Some mocks for widget properties (used in test)
+    │   └── widget.json            - Some mocks for single widget 
+    │   └── widgets.json           - Some mocks for widgets list
+    |
+    |── dists                   - This folder contain our files for include after processing grunt task
+    │    └── main.js            - Concat file js for our application (see grunt concat task, configuration in GruntFile.js)
+    │    └── widget.css         - Concat file css for our application (see grunt concat task, configuration in GruntFile.js)
+    │    └── widget.min.css     - Concat and minify file css for our application 
     |── fonts
-    │   ├── app                 - All of our app specific components go in here
-    │   ├── assets              - Custom assets: fonts, images, etc…
-    │   ├── components          - Our reusable components, non-specific to to our app
-    |
+    |    └──  glyphicons-XXX    - All glyphicons used with Twitter Botstrap 
     |── i18n
-    │   └── lang-en_En.json     - All of our app specific components go in here
-    |── libs
-    │   └──  app                - All of our app specific components go in here
-    │   └── assets              - Custom assets: fonts, images, etc…
-    |
-    |── modules
-    │   └──  core                 - All of our app specific components go in here    |
-    │   └──  widget              - Custom assets: fonts, images, etc…
+    │   └── lang-en_En.json     - Our ressource bundle (english version)
+    |── libs                    - This folder contain all necessary 3thirds parts libs for our application (should be listed     |   └── angular-cache         under bower.json and generate after bower install)
+    │   └── angular                
+    │   └── angular-bootstrap              
+    |   └── .. 
+    |── modules                  - I part the application into two modules (core and widget)
+    │   └──  core                - Contain all globals for our app
+    │        └── config
+    │        └── filters
+    │   └──  widget              - Contain all needs for widget app
     │        └── config
     │        └── controllers
+    |        └── directives
+    |        └── services
+    |        └── tests
+    |        └── views
     |
-    |__ node_modules
+    |__ node_modules           - Contain all node modules (bower + grunt + karma + http-server) lister under package.json
     |
-    └── server
-        ├── api                 - Our apps server api
-        ├── auth                - For handling authentication with different auth strategies
-        ├── components          - Our reusable or app-wide components
-        ├── config              - Where we do the bulk of our apps configuration
-        │   └── local.env.js    - Keep our environment variables out of source control
-        │   └── environment     - Configuration specific to the node environment
-        └── views               - Server rendered views
+    └── styles
+        ├── css                - Our css files
+        └── less               - Our less files
 
 
 ## Some explanation about my work:
