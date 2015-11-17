@@ -130,8 +130,13 @@ wmApp.core (core application)
 wmApp.widget (application for widgetManager)
 Each modules has its own dependencies (filters, directives, controllers, views) depending on their needs.
 
-## SERVER:
+## LOCAL NODE SERVER:
+First copy the package.json.back content to package.json then run server.
 Server run on nodeJs (npm start) on localhost:3000.
+
+## RUN ON NODE SERVER ON CLOUD9:
+After runing npm-start, open:
+https://widget-manager-git-neolanders.c9users.io:8080/#/
 
 ## UI-ROUTER:
 As per requirement, I use angular-ui-router for routing,
@@ -162,6 +167,9 @@ Also, to handle Widget data object I've created a  CRUD (create, read, update, d
 This is was not a requirement, 
 However, I've set the configuration file for karma tests karma.conf.js 
 And I've started some test for widgets service and a directive I'm using to manage widget properties.
+
+## DEMO:
+https://widget-manager-git-neolanders.c9users.io:8080/#/
 
 ## Screens Shot:
 
